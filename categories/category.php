@@ -21,9 +21,9 @@ if (isset($_GET['type'])) {
     $stmt = $conn->prepare("SELECT * FROM props WHERE home_type = :type");
     $stmt->execute(['type' => $type]);
     $alllistings = $stmt->fetchAll(PDO::FETCH_OBJ);
-    if (empty($alllistings)) {
-        echo "<div class='bg-warning p-3 text-center'>No properties found for type: " . htmlspecialchars($type) . "</div>";
-    }
+    // if (empty($alllistings)) {
+    //     echo "<div class='bg-warning p-3 text-center'>No properties found for type: " . htmlspecialchars($type) . "</div>";
+    // }
 }
 
 // Check for 'price' parameter
@@ -45,9 +45,9 @@ if (isset($_GET['name'])) {
         $stmt = $conn->prepare("SELECT * FROM props WHERE home_type = :name");
         $stmt->execute(['name' => $name]);
         $alllistings = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if (empty($alllistings)) {
-            echo "<div class='bg-warning p-3 text-center'>No properties found for home type: " . htmlspecialchars($name) . "</div>";
-        }
+        // if (empty($alllistings)) {
+        //     echo "<div class='bg-warning p-3 text-center'>No properties found for home type: " . htmlspecialchars($name) . "</div>";
+        // }
     }
 } else {
     echo "<div class='bg-warning p-3 text-center'>No home type specified.</div>";

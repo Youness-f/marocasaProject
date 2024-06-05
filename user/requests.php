@@ -20,7 +20,7 @@ $props = $requests->fetchAll(PDO::FETCH_OBJ);
 
 <div class="site-wrap">
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(<?php echo APPURL; ?>/images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(<?php echo APPURL; ?>/images/req.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
                 <div class="col-md-10">
@@ -43,7 +43,7 @@ $props = $requests->fetchAll(PDO::FETCH_OBJ);
                                                                     echo "danger";
                                                                 } ?>"><?php echo $prop->type; ?></span>
                                 </div>
-                                <img src="<?php echo APPURL; ?>/images/<?php echo $prop->image; ?>" alt="Image" class="img-fluid">
+                                <img src="<?php echo THUMBNAILSURL; ?>/<?php echo $prop->image; ?>" alt="Image" class="img-fluid">
                             </a>
                             <div class="p-4 property-body">
                                 <h2 class="property-title"><a href="<?php echo APPURL; ?>/property-details.php?id=<?php echo $prop->id; ?>"><?php echo $prop->name; ?></a></h2>
